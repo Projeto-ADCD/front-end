@@ -1,0 +1,21 @@
+.sideBar {
+position: absolute;
+    width: 360px;
+    height: 982px;
+    left: 0px;
+    top: 15px;
+    text-align: center;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.butao {
+    position: absolute;
+    left: 8.06%;
+    right: 6.11%;
+    top: 33.71%;
+    bottom: 59.16%;
+
+    background: #E4B1AB;
+    border-radius: 5px;
+}
