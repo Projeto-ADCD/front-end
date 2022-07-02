@@ -2,15 +2,23 @@
     box-sizing: border-box;
 }
 
-.App {
-    width: 70vh;
+.formulario {
+    width: 75%;
     margin: 5rem auto;
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* lado a lado */
+    gap: 5rem;
+    flex-direction: column; /* vertical */
+    align-items: center;  
 }
 
 .form-field {
-    flex: 2;
+    display: flex;
+    gap: 3rem;
+}
+
+.inputs {
+    width: 50%;
+    
 }
 
 .output {
@@ -18,8 +26,7 @@
     flex: 1;
 }
 
-.form-field label,
-h2 {
+.form-field label, h2 {
     margin: 0;
     font-size: 18px;
     font-weight: 500;
@@ -72,9 +79,10 @@ button {
 .second-division button {
     color: red;
     border: 1px solid red;
+   
 }
 
-.send-division button {
-    color:green;
-    border: 1px solid green;
+.send-division {
+    width: 333px;
+    height: 65px;
 }
