@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import "./form.css";
 
-export default function GeradorInput({ geradorNome }) {
-  const [ingredientesList, setIngredientesList] = useState([""]);
-
+export default function GeradorInput({
+  geradorNome,
+  ingredientesList,
+  setIngredientesList,
+}) {
   const handleIngredientesList = (e, index) => {
     const { name, value } = e.target; //service, o que foi digitado dentro do imput
     const list = [...ingredientesList];

@@ -19,3 +19,7 @@ position: absolute;
     background: #E4B1AB;
     border-radius: 5px;
 }
+
+side .sideBar
+{display: grid;
+grid-template-columns: 2fr 12fr;}
