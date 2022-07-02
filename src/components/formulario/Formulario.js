@@ -1,22 +1,75 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
+import { useEffect, useState } from "react";
 import "./form.css";
 
-export default function BasicTextFields() {
+function App() {
+  const [ingredientsList, setingredientsList] = useState([""]);
+
+  const handleServiceChange = (e, index) => {
+    const { name, value } = e.target;
+    const list = [...ingredientsList];
+
+    list[index] = value;
+    setingredientsList(list);
+  };
+
+  const handleServiceRemove = (index) => {
+    const list = [...ingredientsList];
+    list.splice(index, 1);
+    setingredientsList(list);
+  };
+
+  const handleServiceAdd = () => {
+    setingredientsList([...ingredientsList, ""]);
+  };
+
+  const handleSubmit = () => {
+    console.log(ingredientsList);
+  };
+
+  useEffect(() => console.log(ingredientsList), []);
   return (
-    <Box
-      component="form"
-      sx={{
-        "& > :not(style)": { m: 1, width: "25ch" },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <div className="testa">
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+    <form className="App" autoComplete="off">
+      <div className="form-field">
+        <label htmlFor="service">Service(s)</label>
+        {ingredientsList.map((singleService, index) => (
+          <div key={index} className="services">
+            <div className="first-division">
+              <input
+                name="service"
+                type="text"
+                id="service"
+                value={singleService}
+                onChange={(e) => handleServiceChange(e, index)}
+                required
+              />
+              {ingredientsList.length - 1 === index && (
+                <button
+                  type="button"
+                  onClick={handleServiceAdd}
+                  className="add-btn"
+                >
+                  <span>Adicionar mais ingrediente</span>
+                </button>
+              )}
+            </div>
+            <div className="second-division">
+              {ingredientsList.length !== 1 && (
+                <button
+                  type="button"
+                  onClick={() => handleServiceRemove(index)}
+                >
+                  <span>remover</span>
+                </button>
+              )}
+            </div>
+          </div>
+        ))}
+        <div className="send-division">
+          <input type="submit" onClick={handleSubmit} />
+        </div>
       </div>
-    </Box>
+    </form>
   );
 }
+
+export default App;
