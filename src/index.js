@@ -3,13 +3,18 @@ import ReactDOM from "react-dom/client";
 
 import Painel from "./components/Sidebar/Painel";
 import Formulario from "./components/formulario/Formulario";
+import BancoReceitas from "./components/listagem_receita/index";
+import ReceitaUnica from "./components/receita_unica/index";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <Painel /> */}
+    {/* <Painel />
 
     <Formulario />
+    <BancoReceitas /> */}
+
+    <ReceitaUnica />
   </React.StrictMode>
 );
 
