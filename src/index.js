@@ -6,15 +6,16 @@ import Formulario from "./components/formulario/Formulario";
 import BancoReceitas from "./components/listagem_receita/index";
 import ReceitaUnica from "./components/receita_unica/index";
 
+import { data } from "./components/listagem_receita/constante";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <Painel />
 
-    <Formulario />
-    <BancoReceitas /> */}
+    <Formulario />*/}
+    <BancoReceitas listagem_receita={data} />
 
-    <ReceitaUnica />
+    {/* <ReceitaUnica receita_unica={data[2]} /> */}
   </React.StrictMode>
 );
 

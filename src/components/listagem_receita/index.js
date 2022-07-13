@@ -3,13 +3,11 @@ import "./listagem.css";
 import { data } from "./constante";
 import img from "./img.jpg";
 
-export default function Banco() {
-  const [receitas, setReceitas] = useState(data);
-
+export default function Banco({ listagem_receita }) {
   return (
     <>
       <h2>Receitas</h2>
-      {receitas.map((receita_unica) => {
+      {listagem_receita.map((receita_unica) => {
         return (
           <div className="receitinha">
             <img src={img} alt="Chama" height={130} width={200} />
