@@ -10,16 +10,19 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import "./index.css"
 
 import { data } from "./components/listagem_receita/constante";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element = {<Formulario />} />
-        <Route path="/receitas" element={<BancoReceitas listagem_receita={data} />} />
-      </Routes>
+      <div style={{display:"flex"}}>
+        <Routes>
+          <Route path="/" element = {<Formulario />} />
+          <Route path="/receitas" element={<BancoReceitas listagem_receita={data} />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   </React.StrictMode>
 );

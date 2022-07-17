@@ -19,7 +19,7 @@ export default function Banco({ listagem_receita }) {
         (
           <>
             <div>
-              <h2>Receitas</h2>
+              <h1>Receitas</h1>
               {listagem_receita.map((receita_unica) => {
                 return (
                   <div

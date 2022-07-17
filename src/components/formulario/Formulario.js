@@ -3,6 +3,7 @@ import GeradorInput from "../GeradorInput";
 import APIadcd from "../../servico/api";
 
 import "./form.css";
+import SideBar from "../Sidebar";
 
 function App() {
   const [ingredientsList, setingredientsList] = useState([""]);
@@ -19,23 +20,26 @@ function App() {
   };
 
   return (
-    <form className="formulario" autoComplete="off">
-      <div className="form-field">
-        <GeradorInput
-          geradorNome="Ingrediente"
-          ingredientesList={ingredientsList}
-          setIngredientesList={setingredientsList}
-        />
-        <GeradorInput
-          geradorNome="Restriçoes"
-          ingredientesList={restricoesList}
-          setIngredientesList={setRestricoesList}
-        />
-      </div>
-      <div className="send-division">
-        <input type="submit" onClick={handleSubmit} />
-      </div>
-    </form>
+    <>
+      <SideBar></SideBar>
+      <form className="formulario" autoComplete="off">
+        <div className="form-field">
+          <GeradorInput
+            geradorNome="Ingrediente"
+            ingredientesList={ingredientsList}
+            setIngredientesList={setingredientsList}
+            />
+          <GeradorInput
+            geradorNome="Restriçoes"
+            ingredientesList={restricoesList}
+            setIngredientesList={setRestricoesList}
+            />
+        </div>
+        <div className="send-division">
+          <input type="submit" onClick={handleSubmit} />
+        </div>
+      </form>
+    </>
   );
 }
 
