@@ -8,6 +8,8 @@ export default function ReceitaUnica({ receita_unica }) {
     <div>
       <p className="tituloReceita">{receita_unica.nome_receita}</p>
       <img src={img} alt="qualquer" />
+
+      <h2 className="receitaParte">INGREDIENTES</h2 >
       <ul>
         {receita_unica.ingredientes["DEFAULT"]
           ? receita_unica.ingredientes["DEFAULT"].map((ingrediente_unico) => {
@@ -29,7 +31,7 @@ export default function ReceitaUnica({ receita_unica }) {
           );
         }
       })}
-      <h2>PREPARO</h2>
+      <h2 className="receitaParte">PREPARO</h2>
       <ul>
         {receita_unica.passos["DEFAULT"]
           ? receita_unica.passos["DEFAULT"].map((passo_unico) => {
