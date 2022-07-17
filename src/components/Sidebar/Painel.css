@@ -20,3 +20,7 @@ position: absolute;
     border-radius: 5px;
 }
 
+.SideBarMatheus {
+    display: inline-block;
+    height: 100%;
+}

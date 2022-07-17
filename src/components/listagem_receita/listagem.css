@@ -19,7 +19,7 @@
 
 .questao {
     width: 17rem;
-    margin: 1rem;
+    /* margin: 1rem; */
     height: 10rem;
     border: 1px gray solid;
     border-radius: 1px;
@@ -123,6 +123,10 @@
     border-radius: 0;
     margin: 0;
     cursor: pointer;
+}
+
+.nomeReceita{
+    max-width: 10rem;
 }
 
 @media (max-width: 500px) {
