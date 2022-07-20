@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import GeradorInput from "../GeradorInput";
-import APIadcd from "../../servico/api";
+import { adcd } from "../../servico/api";
 
 import "./form.css";
 import SideBar from "../Sidebar";
@@ -16,7 +16,7 @@ function App() {
     };
     e.preventDefault();
     console.log(valor);
-    APIadcd.buscaIngredientes(valor);
+    adcd.buscaIngredientes(valor);
   };
 
   return (
@@ -28,12 +28,12 @@ function App() {
             geradorNome="Ingrediente"
             ingredientesList={ingredientsList}
             setIngredientesList={setingredientsList}
-            />
+          />
           <GeradorInput
             geradorNome="Restriçoes"
             ingredientesList={restricoesList}
             setIngredientesList={setRestricoesList}
-            />
+          />
         </div>
         <div className="send-division">
           <input type="submit" onClick={handleSubmit} />
