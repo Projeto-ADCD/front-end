@@ -1,0 +1,10 @@
+.tituloReceita {
+  font-size: 30px;
+}
+
+.receitaParte {
+  margin-top: 15px;
+  font-size: 25px;
+  border-bottom: 2px solid black;
+  max-width: 50rem;
+}

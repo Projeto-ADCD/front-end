@@ -9,7 +9,7 @@ const APIadcd = axios.create({
   },
 });
 
-const adcd = {
+export const adcd = {
   async buscaIngredientes(listaIngredientes) {
     const resposta = await APIadcd.post("/pesquisa", { listaIngredientes });
 
@@ -17,4 +17,9 @@ const adcd = {
   },
 };
 
-export default adcd;
+export const receita_id = {
+  async buscaReceita(id) {
+    const resposta = await APIadcd.get(`/receitas/${id}`);
+    return resposta.data;
+  },
+};

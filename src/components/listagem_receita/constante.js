@@ -19,7 +19,7 @@ export const data = [
   },
   {
     id: 2,
-    nome_receita: "CUPCAKE DE RAPARIGA",
+    nome_receita: "CUPCAKE DE PEIXE VIVO",
     ingredientes: {
       DEFAULT: [
         "1,5 litro de água",
