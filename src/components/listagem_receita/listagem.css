@@ -1,19 +1,27 @@
 .receitinha {
-    gap: 5rem;
+    /* gap: 5rem; */
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     background: #E4B1AB;
     display: inline-block;
     padding: 1rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
     border-radius: 1rem;
-    text-align: center;
+    /* text-align: center; */
+    /* max-width: 30rem; */
+    width: 98%;
+}
+
+.receitinha img{
+    border-radius: 5px;
 }
 
 .linha {
     display: inline-block;
-    margin: 0.5rem;
+    vertical-align:top;
+    /* margin: 0.5rem; */
+    margin-left: 2rem;
 }
 
 .questoes {
@@ -129,8 +137,16 @@
 }
 
 .nomeReceita{
-    max-width: 10rem;
+    /* max-width: 13rem; */
     border-bottom: 2px solid #353535;
+}
+
+.nomeReceita {
+    font-size: 0.999rem;
+}
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
 }
 
 @media (max-width: 500px) {
@@ -156,3 +172,4 @@
     }
 
 }
+

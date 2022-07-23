@@ -8,7 +8,7 @@ export default function SideBar() {
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/receitas">Receitas</a></li>
-          <li><a href="/">Pesquisa</a></li>
+          <li><a href="/pesquisa">Pesquisa</a></li>
           <li><a href="/">Sobre</a></li>
         </ul>
       </div>

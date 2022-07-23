@@ -4,41 +4,31 @@ import { useState } from "react";
 import ReceitaUnica from "../receita_unica/index";
 import SideBar from "../Sidebar/index"
 
-export default function Banco({ listagem_receita }) {
-  const [recipeToRender, setRecipeTorender] = useState(undefined);
-
+export default function Banco({ dataRender }) {
   return (
-    <>
-      <SideBar></SideBar>
-      {
-        recipeToRender ?  (
-          <>
-            <ReceitaUnica receita_unica={recipeToRender}></ReceitaUnica>
-          </>
-        ) :
-        (
-          <>
-            <div>
-              <h1>Receitas</h1>
-              {listagem_receita.map((receita_unica) => {
-                return (
-                  <div
-                  className="receitinha"
-                    onClick={() => setRecipeTorender(receita_unica)}
-                  >
+    (
+      <>
+        <SideBar></SideBar>
+        <div>
+          <h1>Receitas</h1>
+          {dataRender.map((receita_unica) => {
+            return (
+              <a href={"/receita/"+receita_unica.id}>
+              <div
+                className="receitinha"
+                >
                     <img src={img} alt="Chama" height={130} width={200} />
                     <div className="linha">
-                      <h4 className="nomeReceita">{receita_unica.nome_receita}</h4>
-                      <p>{receita_unica.tempo_de_preparo}</p>
-                      <p>{receita_unica.rendimento}</p>
+                      <p className="nomeReceita"><b>{receita_unica.recipe_json.nome_receita}</b></p>
+                      <p>{receita_unica.recipe_json.tempo_de_preparo}</p>
+                      <p>{receita_unica.recipe_json.rendimento}</p>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
-          </>
-        )
-      }
-    </>
+                </div>
+              </a> 
+            );
+          })}
+        </div>
+      </>
+    )
   )
 }
