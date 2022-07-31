@@ -1,22 +1,28 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import GeradorInput from "../GeradorInput";
-import { adcd } from "../../servico/api";
 
 import "./form.css";
 import SideBar from "../Sidebar";
 
-function App() {
+function Formulario() {
   const [ingredientsList, setingredientsList] = useState([""]);
   const [restricoesList, setRestricoesList] = useState([""]);
 
   const handleSubmit = (e) => {
-    const valor = {
-      restricoes: restricoesList,
-      ingredientes: ingredientsList,
-    };
     e.preventDefault();
-    console.log(valor);
-    adcd.buscaIngredientes(valor);
+    let filtered_ingredientsList = ingredientsList.filter((v) => v !== "")
+    let filtered_restricoesList = restricoesList.filter((v) => v !== "")
+    let ingreds = filtered_ingredientsList.join(',')
+    let not_ingreds = filtered_restricoesList.join(',')
+    let link = '/pesquisa/filtro?'
+    if (filtered_ingredientsList.length > 0)
+      link += `ingredientes=${ingreds}`
+    if (filtered_restricoesList.length > 0 && filtered_ingredientsList.length > 0)
+      link += `&not_ingredientes=${not_ingreds}`
+    else if (filtered_restricoesList.length > 0) 
+      link +=`not_ingredientes=${not_ingreds}`
+    
+      window.location.href = link
   };
 
   return (
@@ -38,9 +44,9 @@ function App() {
         <div className="send-division">
           <input type="submit" onClick={handleSubmit} />
         </div>
-      </form>
+    </form>
     </>
-  );
+  )
 }
 
-export default App;
+export default Formulario;
