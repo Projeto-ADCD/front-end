@@ -4,25 +4,30 @@ import { BrowserRouter } from "react-router-dom";
 
 import Painel from "./components/Sidebar/Painel";
 import Formulario from "./components/formulario/Formulario";
-import BancoReceitas from "./components/listagem_receita/index";
 import ReceitaUnica from "./components/receita_unica/index";
 import { Route, Routes } from "react-router-dom";
 import "./index.css";
 
-import { data } from "./components/listagem_receita/constante";
 import TelaReceitaUnica from "./components/tela_receita_unica/index";
+import RenderizaRequest from "./components/renderiza_request";
+import ListaTodasReceitas from "./components/lista_todas_receitas";
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <div style={{ display: "flex" }}>
+      <div className="parentDiv">
         <Routes>
           <Route path="/" element={<Formulario />} />
-          <Route
+          {/* <Route
             path="/receitas"
             element={<BancoReceitas listagem_receita={data} />}
-          />
-          <Route path="/receitas/:id/" element={<TelaReceitaUnica />}></Route>
+          /> */}
+          <Route path="/receita/:id/" element={<TelaReceitaUnica />}></Route>
+          <Route path="/pesquisa/filtro" element={<RenderizaRequest />}></Route>
+          <Route path = "/pesquisa" element = { <Formulario /> }></Route>
+          <Route path = "/receitas" element = { <ListaTodasReceitas /> }></Route>
         </Routes>
       </div>
     </BrowserRouter>

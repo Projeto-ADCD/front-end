@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../listagem_receita/img.jpg";
+import img from "../renderiza_request/img.jpg";
 import "./index.css";
 
 export default function ReceitaUnica({ receita_unica }) {
