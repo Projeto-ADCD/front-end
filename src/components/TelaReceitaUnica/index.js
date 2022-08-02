@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import ReceitaUnica from "../receita_unica/index";
+import ReceitaUnica from "../ReceitaUnica/index";
 import SideBar from "../Sidebar/index";
 import { receita_id } from "../../servico/api";
 

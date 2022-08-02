@@ -3,16 +3,14 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import Painel from "./components/Sidebar/Painel";
-import Formulario from "./components/formulario/Formulario";
-import ReceitaUnica from "./components/receita_unica/index";
+import Formulario from "./components/Formulario/Formulario";
 import { Route, Routes } from "react-router-dom";
 import "./index.css";
 
-import TelaReceitaUnica from "./components/tela_receita_unica/index";
-import RenderizaRequest from "./components/renderiza_request";
-import ListaTodasReceitas from "./components/lista_todas_receitas";
+import TelaReceitaUnica from "./components/TelaReceitaUnica/index";
+import RenderizaRequest from "./components/RenderizaRequest";
+import ListaTodasReceitas from "./components/ListaTodasReceitas";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 
 root.render(
   <React.StrictMode>
@@ -26,8 +24,8 @@ root.render(
           /> */}
           <Route path="/receita/:id/" element={<TelaReceitaUnica />}></Route>
           <Route path="/pesquisa/filtro" element={<RenderizaRequest />}></Route>
-          <Route path = "/pesquisa" element = { <Formulario /> }></Route>
-          <Route path = "/receitas" element = { <ListaTodasReceitas /> }></Route>
+          <Route path="/pesquisa" element={<Formulario />}></Route>
+          <Route path="/receitas" element={<ListaTodasReceitas />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
