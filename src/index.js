@@ -11,6 +11,7 @@ import TelaReceitaUnica from "./components/TelaReceitaUnica/index";
 import RenderizaRequest from "./components/RenderizaRequest";
 import ListaTodasReceitas from "./components/ListaTodasReceitas";
 import PesquisaPorNome from "./components/PesquisaNome";
+import RenderizaRequestNome from "./components/RenderizaRequestNome";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -26,6 +27,7 @@ root.render(
           /> */}
           <Route path="/receita/:id/" element={<TelaReceitaUnica />}></Route>
           <Route path="/pesquisa/filtro" element={<RenderizaRequest />}></Route>
+          <Route path="/pesquisa/pesquisanome/" element={<RenderizaRequestNome />}></Route>
           <Route path="/pesquisa" element={<Formulario />}></Route>
           <Route path="/receitas" element={<ListaTodasReceitas />}></Route>
           <Route path="/pesquisa/nome/" element={<PesquisaPorNome />}></Route>
