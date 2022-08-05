@@ -1,8 +1,8 @@
 import { useState } from "react";
 import GeradorInput from "../GeradorInput";
+import SideBar from "../Sidebar";
 
 import "./form.css";
-import SideBar from "../Sidebar";
 
 export default function Formulario() {
   const [ingredientsList, setingredientsList] = useState([""]);
