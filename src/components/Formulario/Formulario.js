@@ -20,9 +20,9 @@ export default function Formulario() {
       filtered_restricoesList.length > 0 &&
       filtered_ingredientsList.length > 0
     )
-      link += `&not_ingredientes=${not_ingreds}`;
+      link += `&nao_ingredientes=${not_ingreds}`;
     else if (filtered_restricoesList.length > 0)
-      link += `not_ingredientes=${not_ingreds}`;
+      link += `nao_ingredientes=${not_ingreds}`;
 
     window.location.href = link;
   };
