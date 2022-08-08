@@ -21,9 +21,9 @@ export const adcd = {
     let link = "/pesquisa/filtro?";
     if (lista_ingredientes.length > 0) link += `ingredientes=${ingredientes}`;
     if (lista_ingredientes.length > 0 && lista_nao_ingredientes.length > 0)
-      link += `&not_ingredientes=${not_ingredientes}`;
+      link += `&nao_ingredientes=${not_ingredientes}`;
     else if (lista_nao_ingredientes.length > 0)
-      link += `not_ingredientes=${not_ingredientes}`;
+      link += `nao_ingredientes=${not_ingredientes}`;
 
     let resposta = await APIadcd.get(link);
     resposta.data = resposta.data.map((recipe) => {
