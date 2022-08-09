@@ -9,8 +9,8 @@ export default function RenderizaRequest() {
     searchParams.get("ingredientes") ? searchParams.get("ingredientes") : ""
   ).split(",");
   let not_ingreds = (
-    searchParams.get("not_ingredientes")
-      ? searchParams.get("not_ingredientes")
+    searchParams.get("nao_ingredientes")
+      ? searchParams.get("nao_ingredientes")
       : ""
   ).split(",");
 

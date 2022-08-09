@@ -24,7 +24,7 @@ export const adcd = {
       link += `&nao_ingredientes=${not_ingredientes}`;
     else if (lista_nao_ingredientes.length > 0)
       link += `nao_ingredientes=${not_ingredientes}`;
-
+    console.log(link)
     let resposta = await APIadcd.get(link);
     resposta.data = resposta.data.map((recipe) => {
       recipe.recipe_json = JSON.parse(recipe.recipe_json);
