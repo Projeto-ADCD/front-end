@@ -16,6 +16,7 @@ export default function PesquisaPorNome() {
     e.preventDefault();
     let link = "/pesquisa/pesquisanome?nomeReceita=";
     if (nomeReceitas.length > 0) link += nomeReceitas;
+    link += "&page=0"
     window.location.href = link;
   };
   return (

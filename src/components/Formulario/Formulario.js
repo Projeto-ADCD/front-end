@@ -24,6 +24,7 @@ export default function Formulario() {
     else if (filtered_restricoesList.length > 0)
       link += `nao_ingredientes=${not_ingreds}`;
 
+    link += "&page=0"
     window.location.href = link;
   };
 

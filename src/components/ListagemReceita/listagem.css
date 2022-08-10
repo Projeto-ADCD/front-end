@@ -149,6 +149,26 @@ a {
     text-decoration: inherit; /* no underline */
 }
 
+.buttonsPreviousNext{
+    display: inline-block;
+    margin-left: 2rem;
+    margin-bottom: 2rem
+}
+.pointer {
+    cursor: pointer;
+    background-color: #E4B1AB;
+    padding: 0.4rem;
+    border-radius: 5px;
+}
+
+.center {
+    margin-left: 35%;
+}
+
+.paiWidth{
+    width: 100%;
+}
+
 @media (max-width: 500px) {
     .mostra {
         left: 15%;

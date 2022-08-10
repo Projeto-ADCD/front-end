@@ -5,7 +5,7 @@ import "./index.css";
 export default function ReceitaUnica({ receita_unica }) {
   console.log(receita_unica.recipe_json);
   return (
-    <div>
+    <div className="ajeitaParedinha">
       <p className="tituloReceita">{receita_unica.recipe_json.nome_receita}</p>
       <img src={img} alt="qualquer" />
 

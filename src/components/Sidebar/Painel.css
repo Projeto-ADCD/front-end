@@ -28,7 +28,8 @@ position: absolute;
     background-color: #DA5552;
     padding-right: 35px;
     padding-bottom: 10rem;
-    min-width: 20rem;
+    min-width: 25rem;
+    max-width: 25rem;
 }
 
 
@@ -43,12 +44,18 @@ position: absolute;
     text-align: center;
 }
 
+@font-face {
+    font-family: krinkes;
+    src: url(../../../public/fonts/Krinkes/KrinkesDecorPERSONAL.ttf);
+ }
+
 .tituloSite {
     color: white;
     background-color: #DA5552;
-    font-size: 35px;
+    font-family: 'krinkes';
+    font-size: 60px;
     text-align: center;
-    margin: auto 0px 0px 2rem;
+    margin: 0 0px 0px 2rem;
     margin-top: 2rem;
 }
 

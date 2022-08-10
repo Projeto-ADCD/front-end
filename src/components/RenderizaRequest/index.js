@@ -13,12 +13,15 @@ export default function RenderizaRequest() {
       ? searchParams.get("nao_ingredientes")
       : ""
   ).split(",");
+  let page = searchParams.get("page")
+  ? searchParams.get("page")
+  : ""
 
   const [dataRender, setDataRender] = useState(undefined);
 
   useEffect(() => {
     console.log(ingreds, not_ingreds);
-    adcd.buscaIngredientes(ingreds, not_ingreds).then((data) => {
+    adcd.buscaIngredientes(ingreds, not_ingreds, page).then((data) => {
       console.log(data);
       setDataRender(data);
     });

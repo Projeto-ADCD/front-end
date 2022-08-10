@@ -10,7 +10,7 @@ export default function SideBar() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/receitas">Receitas</a>
+            <a href="/receitas?page=0">Receitas</a>
           </li>
           <li>
             <a href="/pesquisa">Pesquisa</a>
