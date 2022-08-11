@@ -6,7 +6,7 @@ import "./pesquisa.css";
 export default function PesquisaPorNome() {
   const [nomeReceitas, setNomeReceitas] = useState("");
   const handleChangeInput = (e) => {
-    const { name, value } = e.target;
+    const { _, value } = e.target;
     setNomeReceitas(value);
     console.log(value);
   };

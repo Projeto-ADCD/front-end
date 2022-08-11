@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GeradorInput from "../GeradorInput";
+import GeradorInput from "../GeradorInput/GeradorInput";
 import SideBar from "../Sidebar";
 
 import "./form.css";

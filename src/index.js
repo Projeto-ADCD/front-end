@@ -2,16 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import Painel from "./components/Sidebar/Painel";
 import Formulario from "./components/Formulario/Formulario";
 import { Route, Routes } from "react-router-dom";
 import "./index.css";
 
-import TelaReceitaUnica from "./components/TelaReceitaUnica/index";
-import RenderizaRequest from "./components/RenderizaRequest";
-import ListaTodasReceitas from "./components/ListaTodasReceitas";
-import PesquisaPorNome from "./components/PesquisaNome";
-import RenderizaRequestNome from "./components/RenderizaRequestNome";
+import TelaReceitaUnica from "./components/TelaReceitaUnica/TelaReceitaUnica";
+import RenderizaRequest from "./components/RenderizaRequest/RenderizaRequest";
+import ListaTodasReceitas from "./components/ListaTodasReceitas/ListaTodasReceitas";
+import PesquisaPorNome from "./components/PesquisaNome/PesquisaPorNome";
+import RenderizaRequestNome from "./components/RenderizaRequestNome/RenderizaRequestNome";
 import Home from "./components/Home/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

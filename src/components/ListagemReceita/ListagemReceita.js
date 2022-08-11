@@ -1,7 +1,5 @@
 import "./listagem.css";
 import img from "./img.jpg";
-import { useState } from "react";
-import ReceitaUnica from "../ReceitaUnica/index";
 import SideBar from "../Sidebar/index";
 import { useLocation, useSearchParams } from "react-router-dom";
 

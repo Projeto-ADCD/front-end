@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { adcd } from "../../servico/api";
-import Banco from "../ListagemReceita";
-
+import Banco from "../ListagemReceita/ListagemReceita";
+import TelaLoading from "../TelaCarregamento/TelaCarregamento";
 export default function RenderizaRequest() {
   const [searchParams] = useSearchParams();
   let ingreds = (
@@ -32,7 +32,8 @@ export default function RenderizaRequest() {
   }
   return (
     <>
-      <h2>loading</h2>
+     <TelaLoading></TelaLoading>
+
     </>
   );
 }

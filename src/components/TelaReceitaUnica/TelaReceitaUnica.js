@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import ReceitaUnica from "../ReceitaUnica/index";
+import ReceitaUnica from "../ReceitaUnica/ReceitaUnica";
 import SideBar from "../Sidebar/index";
 import { receita_id } from "../../servico/api";
 
+import TelaLoading from "../TelaCarregamento/TelaCarregamento";
 export default function TelaReceitaUnica() {
   const [data, setData] = useState(undefined);
   let params = useParams();
   let id = params.id;
-  const { REACT_APP_URL_BACKEND } = process.env;
 
   useEffect(() => {
     receita_id.buscaReceita(id).then((data) => {
@@ -21,7 +21,7 @@ export default function TelaReceitaUnica() {
   if (!data) {
     return (
       <>
-        <h2>Loading</h2>
+        <TelaLoading></TelaLoading>
       </>
     );
   } else {
