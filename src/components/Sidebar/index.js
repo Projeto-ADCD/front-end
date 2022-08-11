@@ -6,21 +6,11 @@ export default function SideBar() {
       <div className="SideBarMatheus">
         <h2 className="tituloSite">Tasteful Receitas</h2>
         <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/receitas?page=0">Receitas</a>
-          </li>
-          <li>
-            <a href="/pesquisa">Pesquisa</a>
-          </li>
-          <li>
-            <a href="/pesquisa/nome">Buscar Receita</a>
-          </li>
-          <li>
-            <a href="/">Sobre</a>
-          </li>
+        <a href="/"><li>Home</li></a>
+        <a href="/receitas?page=0"><li>Receitas</li></a>
+        <a href="/pesquisa"><li>Pesquisa</li></a>
+        <a href="/pesquisa/nome"><li>Buscar Receita</li></a>
+        <a href="/"><li>Sobre</li></a>
         </ul>
       </div>
     </>
