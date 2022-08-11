@@ -12,6 +12,7 @@ import RenderizaRequest from "./components/RenderizaRequest";
 import ListaTodasReceitas from "./components/ListaTodasReceitas";
 import PesquisaPorNome from "./components/PesquisaNome";
 import RenderizaRequestNome from "./components/RenderizaRequestNome";
+import Home from "./components/Home/Home";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -20,11 +21,7 @@ root.render(
     <BrowserRouter>
       <div className="parentDiv">
         <Routes>
-          <Route path="/" element={<Formulario />} />
-          {/* <Route
-            path="/receitas"
-            element={<BancoReceitas listagem_receita={data} />}
-          /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/receita/:id/" element={<TelaReceitaUnica />}></Route>
           <Route path="/pesquisa/filtro" element={<RenderizaRequest />}></Route>
           <Route path="/pesquisa/pesquisanome/" element={<RenderizaRequestNome />}></Route>
