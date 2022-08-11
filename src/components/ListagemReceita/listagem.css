@@ -149,11 +149,7 @@ a {
     text-decoration: inherit; /* no underline */
 }
 
-b:hover{
-    color:white;
-    text-decoration: none; /* no underline */
 
-}
 .buttonsPreviousNext{
     display: inline-block;
     margin-left: 2rem;
