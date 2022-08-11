@@ -10,7 +10,7 @@ export default function SideBar() {
         <a href="/receitas?page=0"><li>Receitas</li></a>
         <a href="/pesquisa"><li>Pesquisa</li></a>
         <a href="/pesquisa/nome"><li>Buscar Receita</li></a>
-        <a href="/"><li>Sobre</li></a>
+        <a href="/sobre"><li>Sobre</li></a>
         </ul>
       </div>
     </>

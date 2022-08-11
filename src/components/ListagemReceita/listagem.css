@@ -149,6 +149,11 @@ a {
     text-decoration: inherit; /* no underline */
 }
 
+b:hover{
+    color:white;
+    text-decoration: none; /* no underline */
+
+}
 .buttonsPreviousNext{
     display: inline-block;
     margin-left: 2rem;
@@ -167,6 +172,7 @@ a {
 
 .paiWidth{
     width: 100%;
+    margin-left: 3rem;
 }
 
 @media (max-width: 500px) {

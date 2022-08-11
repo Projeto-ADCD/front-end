@@ -12,6 +12,7 @@ import ListaTodasReceitas from "./components/ListaTodasReceitas/ListaTodasReceit
 import PesquisaPorNome from "./components/PesquisaNome/PesquisaPorNome";
 import RenderizaRequestNome from "./components/RenderizaRequestNome/RenderizaRequestNome";
 import Home from "./components/Home/Home";
+import Sobre from "./components/Sobre/Sobre";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -27,6 +28,7 @@ root.render(
           <Route path="/pesquisa" element={<Formulario />}></Route>
           <Route path="/receitas" element={<ListaTodasReceitas />}></Route>
           <Route path="/pesquisa/nome/" element={<PesquisaPorNome />}></Route>
+          <Route path="/sobre" element={<Sobre />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
