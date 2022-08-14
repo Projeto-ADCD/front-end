@@ -1,0 +1,26 @@
+.pesquisaPorNomeClass {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 5px 0.5rem 0;
+    width: 100%;
+    padding-left: 3rem;
+}
+
+.pesquisaPorNomeClass button {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    color: rgb(0, 208, 255);
+    border: 1px solid rgb(0, 208, 255);
+}
+
+.pesqNome {
+    align-self: center;
+    height: 30px;
+    width: 60%;
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+}
