@@ -1,0 +1,16 @@
+.textoSobre{
+    text-align: center;
+    background-color: #E4B1AB;
+    width: 60%;
+    align-items: center;
+    margin: auto;
+    margin-top: 4rem;
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.classeSobre{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    
+}

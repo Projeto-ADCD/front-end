@@ -24,10 +24,10 @@ position: absolute;
 .SideBarMatheus {
     height: auto;
     float: left;
-    margin-right: 3rem;
+    /* margin-right: 3rem; */
     background-color: #DA5552;
     padding-right: 35px;
-    padding-bottom: 10rem;
+    /* padding-bottom: 10rem; */
     min-width: 25rem;
     max-width: 25rem;
 }
