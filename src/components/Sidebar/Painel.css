@@ -24,11 +24,12 @@ position: absolute;
 .SideBarMatheus {
     height: auto;
     float: left;
-    margin-right: 3rem;
+    /* margin-right: 3rem; */
     background-color: #DA5552;
     padding-right: 35px;
-    padding-bottom: 10rem;
-    min-width: 20rem;
+    /* padding-bottom: 10rem; */
+    min-width: 25rem;
+    max-width: 25rem;
 }
 
 
@@ -36,36 +37,40 @@ position: absolute;
     text-decoration: none;
     list-style-type: none;
     font-size: 30px;
-    margin-top: 5rem;
+    margin-top: 4rem;
     background-color: #E4B1AB;
     padding: 0.5rem 2rem 0.5rem 2rem;
     border-radius: 3px;
     text-align: center;
 }
 
+@font-face {
+    font-family: krinkes;
+    src: url(../../../public/fonts/Krinkes/KrinkesDecorPERSONAL.ttf);
+ }
+
 .tituloSite {
     color: white;
     background-color: #DA5552;
-    font-size: 35px;
+    font-family: 'krinkes';
+    font-size: 60px;
     text-align: center;
-    margin: auto 0px 0px 2rem;
+    margin: 0 0px 0px 2rem;
     margin-top: 2rem;
 }
 
 .SideBarMatheus a {
     text-decoration: none;
-    color:rgba(0, 0, 0);
     color: #81171B;
 }
 
 .SideBarMatheus a:hover {
     text-decoration: none;
-    color: #81171B;
+    color: white;
 }
 
 .SideBarMatheus a:visited {
     text-decoration: none;
-    color: #81171B;
 }
 
 .SideBarMatheus a:active {

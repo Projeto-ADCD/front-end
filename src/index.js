@@ -2,32 +2,33 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import Painel from "./components/Sidebar/Painel";
-import Formulario from "./components/formulario/Formulario";
-import ReceitaUnica from "./components/receita_unica/index";
+import Formulario from "./components/Formulario/Formulario";
 import { Route, Routes } from "react-router-dom";
 import "./index.css";
 
-import TelaReceitaUnica from "./components/tela_receita_unica/index";
-import RenderizaRequest from "./components/renderiza_request";
-import ListaTodasReceitas from "./components/lista_todas_receitas";
-const root = ReactDOM.createRoot(document.getElementById("root"));
+import TelaReceitaUnica from "./components/TelaReceitaUnica/TelaReceitaUnica";
+import RenderizaRequest from "./components/RenderizaRequest/RenderizaRequest";
+import ListaTodasReceitas from "./components/ListaTodasReceitas/ListaTodasReceitas";
+import PesquisaPorNome from "./components/PesquisaNome/PesquisaPorNome";
+import RenderizaRequestNome from "./components/RenderizaRequestNome/RenderizaRequestNome";
+import Home from "./components/Home/Home";
+import Sobre from "./components/Sobre/Sobre";
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <div className="parentDiv">
         <Routes>
-          <Route path="/" element={<Formulario />} />
-          {/* <Route
-            path="/receitas"
-            element={<BancoReceitas listagem_receita={data} />}
-          /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/receita/:id/" element={<TelaReceitaUnica />}></Route>
           <Route path="/pesquisa/filtro" element={<RenderizaRequest />}></Route>
-          <Route path = "/pesquisa" element = { <Formulario /> }></Route>
-          <Route path = "/receitas" element = { <ListaTodasReceitas /> }></Route>
+          <Route path="/pesquisa/pesquisanome/" element={<RenderizaRequestNome />}></Route>
+          <Route path="/pesquisa" element={<Formulario />}></Route>
+          <Route path="/receitas" element={<ListaTodasReceitas />}></Route>
+          <Route path="/pesquisa/nome/" element={<PesquisaPorNome />}></Route>
+          <Route path="/sobre" element={<Sobre />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
