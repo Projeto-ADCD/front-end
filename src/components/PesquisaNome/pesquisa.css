@@ -11,8 +11,11 @@
     display: flex;
     align-items: center;
     margin-top: 0.5rem;
-    color: rgb(0, 208, 255);
-    border: 1px solid rgb(0, 208, 255);
+    color: #81171B;
+    /* border: 1px solid rgb(0, 208, 255); */
+    background-color: rgb(224, 204, 202);;
+    border: none;
+    font-size: 18px;
 }
 
 .pesqNome {

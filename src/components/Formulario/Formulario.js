@@ -32,14 +32,17 @@ export default function Formulario() {
     <>
       <SideBar></SideBar>
       <form className="formulario" autoComplete="off">
+        <div className="titleForm">
+          <h1>Pesquisa por ingredientes e restrições</h1>  
+        </div> 
         <div className="form-field">
           <GeradorInput
-            geradorNome="Ingrediente"
+            geradorNome="Ingredientes"
             ingredientesList={ingredientsList}
             setIngredientesList={setingredientsList}
           />
           <GeradorInput
-            geradorNome="Restriçoes"
+            geradorNome="Restrições"
             ingredientesList={restricoesList}
             setIngredientesList={setRestricoesList}
           />

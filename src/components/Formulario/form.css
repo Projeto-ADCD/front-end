@@ -3,12 +3,13 @@
 }
 
 .formulario {
+    flex-wrap: wrap;
     width: 75%;
     margin: 5rem auto;
-    display: flex; /* lado a lado */
+    display: flex; 
     gap: 5rem;
-    flex-direction: column; /* vertical */
-    align-items: center;  
+    flex-direction: column; 
+    align-items: center;
 }
 
 .form-field {
@@ -30,7 +31,7 @@
     margin: 0;
     font-size: 18px;
     font-weight: 500;
-    color: rgb(84, 84, 84);
+    color: black;
 }
 
 input {
@@ -39,11 +40,11 @@ input {
     padding: 7px;
     outline: none;
     border-radius: 5px;
-    border: 1px solid rgb(220, 220, 220);
+    border: 1px solid black;
 }
 
 input:focus {
-    border: 1px solid rgb(0, 208, 255);
+    border: 1px solid black;
 }
 
 .services {
@@ -72,17 +73,32 @@ button {
     display: flex;
     align-items: center;
     margin-top: 0.5rem;
-    color: rgb(0, 208, 255);
-    border: 1px solid rgb(0, 208, 255);
+    color: black;
+    border: none;
+    background-color: rgb(224, 204, 202);;
+    color: #81171B;
 }
 
 .second-division button {
-    color: red;
-    border: 1px solid red;
+    background-color: rgb(224, 204, 202);;
+    color: #81171B;
+    border: none;
    
 }
 
 .send-division {
     width: 333px;
     height: 65px;
+}
+
+.send-division input:hover {
+    cursor: pointer;
+}
+
+.send-division input{
+    background: rgb(224, 204, 202);;
+    color: #81171B;
+    font-size: 18px;
+    border: none;
+    font-style: bold;
 }
