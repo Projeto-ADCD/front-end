@@ -5,6 +5,7 @@ export default function GeradorInput({
 }) {
   const handleIngredientesList = (e, index) => {
     const { name, value } = e.target; //service, o que foi digitado dentro do imput
+
     const list = [...ingredientesList];
     list[index] = value;
     setIngredientesList(list);
@@ -40,7 +41,7 @@ export default function GeradorInput({
                 onClick={handleIngredientesAdd}
                 className="add-btn"
               >
-                <span>Adicionar mais</span>
+                <span>+</span>
               </button>
             )}
           </div>

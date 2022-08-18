@@ -1,5 +1,6 @@
 import "./listagem.css";
-import img from "./img.jpg";
+// import img from "./img.jpg";
+import img from "../../imgs/neo.png"
 import SideBar from "../Sidebar/index";
 import { useLocation, useSearchParams } from "react-router-dom";
 
@@ -41,7 +42,7 @@ export default function Banco({ dataRender }) {
           return (
             <a href={"/receita/" + receita_unica.id}>
               <div className="receitinha">
-                <img src={img} alt="Chama" height={130} width={200} />
+                <img src={img} alt="Chama" height={130} width={135} />
                 <div className="linha">
                   <p className="nomeReceita">
                     <b>{receita_unica.recipe_json.nome_receita}</b>

@@ -1,5 +1,6 @@
 import React from "react";
-import img from "../RenderizaRequest/img.jpg";
+// import img from "../RenderizaRequest/img.jpg";
+import img from '../../imgs/neo.png'
 import "./index.css";
 
 export default function ReceitaUnica({ receita_unica }) {
@@ -7,7 +8,7 @@ export default function ReceitaUnica({ receita_unica }) {
   return (
     <div className="ajeitaParedinha">
       <p className="tituloReceita">{receita_unica.recipe_json.nome_receita}</p>
-      <img src={img} alt="qualquer" />
+      <img src={img} alt="qualquer" className="imageMano"/>
 
       <h2 className="receitaParte">INGREDIENTES</h2>
       <ul>
