@@ -77,3 +77,20 @@ position: absolute;
     text-decoration: none;
     color: #81171B;
 }
+
+@media (max-width: 1400px){
+    .SideBarMatheus {
+        min-width: 22rem;
+        max-width: 22rem;
+    }
+
+    .SideBarMatheus a {
+        font-size: 15px;
+    }
+
+    .SideBarMatheus li {
+
+        margin-top: 2rem;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+}
