@@ -38,6 +38,16 @@ export default function Banco({ dataRender }) {
       <SideBar></SideBar>
       <div className="paiWidth">
         <h1>Receitas</h1>
+        <div className="ordenacao">
+        <label for="order">Ordenação: </label>
+        <select id="receitas" name="order" size="1">
+          <option value="menosPorc">Gera menos porçoes</option>
+          <option value="maisPorc">Gera mais porçoes</option>
+          <option value="menosTempo">Demora menos tempo</option>
+          <option value="maisTempo">Demora mais tempo </option>
+        </select>
+        </div>
+        
         {dataRender.map((receita_unica) => {
           return (
             <a href={"/receita/" + receita_unica.id}>
