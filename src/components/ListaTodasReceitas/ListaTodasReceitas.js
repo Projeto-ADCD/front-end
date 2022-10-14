@@ -4,7 +4,6 @@ import { receitas } from "../../servico/api";
 import Banco from "../ListagemReceita/ListagemReceita";
 import TelaLoading from "../TelaCarregamento/TelaCarregamento";
 
-
 export default function ListaTodasReceitas() {
   const [dataRender, setDataRender] = useState(undefined);
   const [searchParams] = useSearchParams();
