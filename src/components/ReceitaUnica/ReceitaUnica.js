@@ -4,11 +4,20 @@ import img from '../../imgs/neo.png'
 import "./index.css";
 
 export default function ReceitaUnica({ receita_unica }) {
+  function getImage(receita_unica){
+    var qualquerCoisa
+    if (receita_unica.has_image === true){
+      qualquerCoisa = `https://raw.githubusercontent.com/Projeto-ADCD/crawler/14-atualizacao-crawler-extract-categories/src/extract-infos-recipe/data/${receita_unica.directory_name}/img.jpg`
+    }else{
+      qualquerCoisa = img
+    }
+    return qualquerCoisa
+  }
   console.log(receita_unica.recipe_json);
   return (
     <div className="ajeitaParedinha">
       <p className="tituloReceita">{receita_unica.recipe_json.nome_receita}</p>
-      <img src={img} alt="qualquer" className="imageMano"/>
+      <img src={getImage(receita_unica)} alt="qualquer" className="imageMano"/>
 
       <h2 className="receitaParte">INGREDIENTES</h2>
       <ul>
