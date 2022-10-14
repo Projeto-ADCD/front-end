@@ -170,6 +170,20 @@ a {
     width: 100%;
     margin-left: 3rem;
 }
+.ordenacao{
+    float: right;
+    font-size: 1.3rem;
+    
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 1.7%;
+    width: 15%;
+    text-align: center;
+}
+
+h1{
+    display: inline-block;
+}
 
 @media (max-width: 500px) {
     .mostra {
