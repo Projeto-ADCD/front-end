@@ -10,9 +10,14 @@ export default function ListaTodasReceitas() {
   let page = searchParams.get("page")
       ? searchParams.get("page")
       : "";
+  let paramOrdem = searchParams.get("paramOrdem") ?
+      searchParams.get("paramOrdem") : "";
+    
+  let ascending = searchParams.get("ascending") ?
+      searchParams.get("ascending") : "";
 
   useEffect(() => {
-    receitas.retornaTodasReceitas(page).then((data) => {
+    receitas.retornaTodasReceitas(page, paramOrdem,ascending).then((data) => {
       setDataRender(data);
     });
   }, []);
