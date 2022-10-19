@@ -2,8 +2,7 @@ import "./listagem.css";
 import defaultImg from "../../imgs/neo.png"
 import SideBar from "../Sidebar/index";
 import { useLocation, useSearchParams } from "react-router-dom";
-import { pegaImagem } from "../../servico/api";
-import { useEffect } from "react";
+import Ordenacao from "../Ordenacao/Ordenacao";
 
 export default function Banco({ dataRender }) {
   const [searchParams] = useSearchParams();
@@ -17,7 +16,6 @@ export default function Banco({ dataRender }) {
     let link = location.pathname + location.search
     let regex = /page=[0-9]+/
     link = link.replace(regex,`page=${page}`)
-    console.log(link)
     window.location.href = link;
   }
 
@@ -44,21 +42,16 @@ export default function Banco({ dataRender }) {
     return qualquerCoisa
   }
 
+
+
   return (
     <>
       <SideBar></SideBar>
       <div className="paiWidth">
         <h1>Receitas</h1>
-        <div className="ordenacao">
-        <label for="order">Ordenação: </label>
-        <select id="receitas" name="order" size="1">
-          <option value="menosPorc">Gera menos porçoes</option>
-          <option value="maisPorc">Gera mais porçoes</option>
-          <option value="menosTempo">Demora menos tempo</option>
-          <option value="maisTempo">Demora mais tempo </option>
-        </select>
-        </div>
         
+        <Ordenacao></Ordenacao>
+              
         {dataRender.map((receita_unica) => {
           return (
             <a href={"/receita/" + receita_unica.id}>

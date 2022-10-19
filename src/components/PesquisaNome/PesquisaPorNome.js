@@ -5,13 +5,13 @@ import "./pesquisa.css";
 
 export default function PesquisaPorNome() {
   const [nomeReceitas, setNomeReceitas] = useState("");
+  
   const handleChangeInput = (e) => {
     const { _, value } = e.target;
     setNomeReceitas(value);
     console.log(value);
   };
-  useEffect(() => {}, []);
-
+ 
   const handleSubmit = (e) => {
     e.preventDefault();
     let link = "/pesquisa/pesquisanome?nomeReceita=";

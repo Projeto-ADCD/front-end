@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { adcd } from "../../servico/api";
 import Banco from "../ListagemReceita/ListagemReceita";
 import TelaLoading from "../TelaCarregamento/TelaCarregamento";
+
 export default function RenderizaRequest() {
   const [searchParams] = useSearchParams();
   let ingreds = (
@@ -16,12 +17,18 @@ export default function RenderizaRequest() {
   let page = searchParams.get("page")
   ? searchParams.get("page")
   : ""
+  
+  let paramOrdem = searchParams.get("paramOrdem") ?
+  searchParams.get("paramOrdem") : "";
+
+  let ascending = searchParams.get("ascending") ?
+  searchParams.get("ascending") : "";
 
   const [dataRender, setDataRender] = useState(undefined);
 
   useEffect(() => {
     console.log(ingreds, not_ingreds);
-    adcd.buscaIngredientes(ingreds, not_ingreds, page).then((data) => {
+    adcd.buscaIngredientes(ingreds, not_ingreds, page, paramOrdem, ascending).then((data) => {
       console.log(data);
       setDataRender(data);
     });
@@ -33,7 +40,6 @@ export default function RenderizaRequest() {
   return (
     <>
      <TelaLoading></TelaLoading>
-
     </>
   );
 }
