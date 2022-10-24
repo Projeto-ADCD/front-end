@@ -16,8 +16,11 @@ export default function ListaTodasReceitas() {
   let ascending = searchParams.get("ascending") ?
       searchParams.get("ascending") : "";
 
+  let tag = searchParams.get("tag") ?
+      searchParams.get("tag") : "";
+      
   useEffect(() => {
-    receitas.retornaTodasReceitas(page, paramOrdem,ascending).then((data) => {
+    receitas.retornaTodasReceitas(page, paramOrdem,ascending,tag).then((data) => {
       setDataRender(data);
     });
   }, []);

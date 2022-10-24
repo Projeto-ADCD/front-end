@@ -23,12 +23,15 @@ export default function RenderizaRequest() {
 
   let ascending = searchParams.get("ascending") ?
   searchParams.get("ascending") : "";
+  
+  let tag = searchParams.get("tag") ?
+  searchParams.get("tag") : "";
 
   const [dataRender, setDataRender] = useState(undefined);
 
   useEffect(() => {
     console.log(ingreds, not_ingreds);
-    adcd.buscaIngredientes(ingreds, not_ingreds, page, paramOrdem, ascending).then((data) => {
+    adcd.buscaIngredientes(ingreds, not_ingreds, page, paramOrdem, ascending, tag).then((data) => {
       console.log(data);
       setDataRender(data);
     });

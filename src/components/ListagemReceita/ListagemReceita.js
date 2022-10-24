@@ -3,6 +3,7 @@ import defaultImg from "../../imgs/neo.png"
 import SideBar from "../Sidebar/index";
 import { useLocation, useSearchParams } from "react-router-dom";
 import Ordenacao from "../Ordenacao/Ordenacao";
+import Categoria from "../Categoria/Categoria";
 
 export default function Banco({ dataRender }) {
   const [searchParams] = useSearchParams();
@@ -41,9 +42,7 @@ export default function Banco({ dataRender }) {
     }
     return qualquerCoisa
   }
-
-
-
+  
   return (
     <>
       <SideBar></SideBar>
@@ -51,6 +50,7 @@ export default function Banco({ dataRender }) {
         <h1>Receitas</h1>
         
         <Ordenacao></Ordenacao>
+        <Categoria></Categoria>
               
         {dataRender.map((receita_unica) => {
           return (

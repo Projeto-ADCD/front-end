@@ -20,11 +20,14 @@ export default function RenderizaRequestNome() {
   let ascending = searchParams.get("ascending") ?
   searchParams.get("ascending") : "";
 
+  let tag = searchParams.get("tag") ?
+  searchParams.get("tag") : "";
+
   const [dataRender, setDataRender] = useState(undefined);
 
   useEffect(() => {
     console.log(ingreds);
-    receitaNome.retornaReceitaNome(ingreds,page, paramOrdem, ascending).then((data) => {
+    receitaNome.retornaReceitaNome(ingreds,page, paramOrdem, ascending, tag).then((data) => {
       console.log(data);
       setDataRender(data);
     });
