@@ -4,18 +4,23 @@ import { receitas } from "../../servico/api";
 import Banco from "../ListagemReceita/ListagemReceita";
 import TelaLoading from "../TelaCarregamento/TelaCarregamento";
 
-
-
-
 export default function ListaTodasReceitas() {
   const [dataRender, setDataRender] = useState(undefined);
   const [searchParams] = useSearchParams();
   let page = searchParams.get("page")
       ? searchParams.get("page")
       : "";
+  let paramOrdem = searchParams.get("paramOrdem") ?
+      searchParams.get("paramOrdem") : "";
+    
+  let ascending = searchParams.get("ascending") ?
+      searchParams.get("ascending") : "";
 
+  let tag = searchParams.get("tag") ?
+      searchParams.get("tag") : "";
+      
   useEffect(() => {
-    receitas.retornaTodasReceitas(page).then((data) => {
+    receitas.retornaTodasReceitas(page, paramOrdem,ascending,tag).then((data) => {
       setDataRender(data);
     });
   }, []);

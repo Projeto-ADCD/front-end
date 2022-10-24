@@ -1,8 +1,9 @@
 import "./listagem.css";
-// import img from "./img.jpg";
-import img from "../../imgs/neo.png"
+import defaultImg from "../../imgs/neo.png"
 import SideBar from "../Sidebar/index";
 import { useLocation, useSearchParams } from "react-router-dom";
+import Ordenacao from "../Ordenacao/Ordenacao";
+import Categoria from "../Categoria/Categoria";
 
 export default function Banco({ dataRender }) {
   const [searchParams] = useSearchParams();
@@ -16,7 +17,6 @@ export default function Banco({ dataRender }) {
     let link = location.pathname + location.search
     let regex = /page=[0-9]+/
     link = link.replace(regex,`page=${page}`)
-    console.log(link)
     window.location.href = link;
   }
 
@@ -33,16 +33,31 @@ export default function Banco({ dataRender }) {
     window.location.href = link;
   }
 
+  function getImage(receita_unica){
+    var qualquerCoisa
+    if (receita_unica.has_image === true){
+      qualquerCoisa = `https://raw.githubusercontent.com/Projeto-ADCD/crawler/14-atualizacao-crawler-extract-categories/src/extract-infos-recipe/data/${receita_unica.directory_name}/img.jpg`
+    }else{
+      qualquerCoisa = defaultImg
+    }
+    return qualquerCoisa
+  }
+  
   return (
     <>
       <SideBar></SideBar>
       <div className="paiWidth">
         <h1>Receitas</h1>
+        
+        <Ordenacao></Ordenacao>
+        <Categoria></Categoria>
+              
         {dataRender.map((receita_unica) => {
           return (
             <a href={"/receita/" + receita_unica.id}>
               <div className="receitinha">
-                <img src={img} alt="Chama" height={130} width={135} />
+
+                <img src={getImage(receita_unica)} alt="Chama" height={130} width={135}/>
                 <div className="linha">
                   <p className="nomeReceita">
                     <b>{receita_unica.recipe_json.nome_receita}</b>
