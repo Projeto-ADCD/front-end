@@ -1,0 +1,13 @@
+.categoria{
+    float: right;
+    font-size: 1.3rem;
+    
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 1.7%;
+    margin-right: 10rem;
+    width: 15%;
+    text-align: center;
+    display: flex;
+   flex-wrap: wrap;
+}

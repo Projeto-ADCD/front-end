@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useLocation, useSearchParams } from "react-router-dom";
+import "./Categoria.css";
 
 export default function Categoria() {
     const location = useLocation();
@@ -58,9 +59,9 @@ export default function Categoria() {
     }
 
     return (
-        <div className="ordenacao">
-            <label for="order">Ordenação: </label>
-            <select id="receitas" onChange={pegaEstadoDrop} name="order" size="1">
+        <div className="categoria">
+            <label for="cat">Categoria: </label>
+            <select id="receitas" onChange={pegaEstadoDrop} name="cat" size="1">
                 <option value="null"></option>
                 <option value="bolosTortas"> BOLOS E TORTAS DOCES</option>
                 <option value="carnes">CARNES</option>

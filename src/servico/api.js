@@ -31,6 +31,8 @@ export const adcd = {
       link
     const urlCategoria =  tag !== "" ?
     urlChamado + `&tag=${tag}` : urlChamado
+
+    console.log(urlChamado)
     let resposta = await APIadcd.get(urlCategoria);
 
     resposta.data = resposta.data.map((recipe) => {
@@ -83,7 +85,7 @@ export const receitaNome = {
 
     const urlCategoria = tag !== "" ?
     urlChamado + `&tag=${tag}` : urlChamado
-    
+    console.log(urlChamado)
     const resposta = await APIadcd.get(urlCategoria);
 
     resposta.data = resposta.data.map((recipe) => {
