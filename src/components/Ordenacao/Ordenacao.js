@@ -34,7 +34,7 @@ export default function Ordenacao() {
 
     return (
         <div className="ordenacao">
-            <label for="order">Ordenação: </label>
+            <label for="order">Ordena Por: </label>
             <select id="receitas" onChange={pegaEstadoDrop} name="order" size="1">
                 <option value="null"></option>
                 <option value="menosPorc">Gera menos porçoes</option>

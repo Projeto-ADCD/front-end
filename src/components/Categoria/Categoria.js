@@ -37,6 +37,9 @@ export default function Categoria() {
             case "lanches":
                 cate = "LANCHES";
                 break;
+            case "sopas":
+                cate = "SOPAS";
+                break;
             case "pratoUnico":
                 cate = "PRATO ÚNICO";
                 break;
@@ -52,7 +55,7 @@ export default function Categoria() {
 
     function geraCategoria(tipoOrden) {
         let link = location.pathname + location.search
-        let regex = /&tag=(BOLOS%20E%20TORTAS%20DOCES|CARNES|AVES|PEIXES%20E%20FRUTOS%20DO%20MAR|SALADAS,%20MOLHOS%20E%20ACOMPANHAMENTOS|SOPAS|MASSAS|BEBIDAS|DOCES%20E%20SOBREMESAS|LANCHES|PRATO%20ÚNICO|LIGHT|ALIMENTAÇÃO%20SAUDÁVEL)/
+        let regex = /&tag=(BOLOS%20E%20TORTAS%20DOCES|CARNES|AVES|PEIXES%20E%20FRUTOS%20DO%20MAR|SALADAS,%20MOLHOS%20E%20ACOMPANHAMENTOS|SOPAS|MASSAS|BEBIDAS|DOCES%20E%20SOBREMESAS|LANCHES|PRATO%20%C3%9ANICO|LIGHT|ALIMENTA%C3%87%C3%83O%20SAUD%C3%81VEL)/
         console.log(regex)
         link = link.replace(regex, "")
         link = link + `&tag=${tipoOrden}`
