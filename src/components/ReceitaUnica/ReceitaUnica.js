@@ -65,6 +65,15 @@ export default function ReceitaUnica({ receita_unica }) {
           );
         }
       })}
+      <h2 className="receitaParte">CATEGORIA</h2>
+      <ul>
+        {receita_unica.recipe_json.tags
+          ? receita_unica.recipe_json.tags.map((tag_unica) => {
+              return <li> {tag_unica}</li>;
+            })
+          : ""}
+      </ul>
+      
     </div>
   );
 }

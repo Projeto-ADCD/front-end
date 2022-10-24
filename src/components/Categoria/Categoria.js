@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useLocation, useSearchParams } from "react-router-dom";
+import "./Categoria.css";
 
 export default function Categoria() {
     const location = useLocation();
@@ -51,26 +52,27 @@ export default function Categoria() {
 
     function geraCategoria(tipoOrden) {
         let link = location.pathname + location.search
-        let regex = /&tag=\S{3,33}/
+        let regex = /&tag=(BOLOS%20E%20TORTAS%20DOCES|CARNES|AVES|PEIXES%20E%20FRUTOS%20DO%20MAR|SALADAS,%20MOLHOS%20E%20ACOMPANHAMENTOS|SOPAS|MASSAS|BEBIDAS|DOCES%20E%20SOBREMESAS|LANCHES|PRATO%20ÚNICO|LIGHT|ALIMENTAÇÃO%20SAUDÁVEL)/
+        console.log(regex)
         link = link.replace(regex, "")
         link = link + `&tag=${tipoOrden}`
         window.location.href = link;
     }
 
     return (
-        <div className="ordenacao">
-            <label for="order">Ordenação: </label>
-            <select id="receitas" onChange={pegaEstadoDrop} name="order" size="1">
+        <div className="categoria">
+            <label for="cat">Categoria: </label>
+            <select id="receitas" onChange={pegaEstadoDrop} name="cat" size="1">
                 <option value="null"></option>
-                <option value="bolosTortas"> BOLOS E TORTAS DOCES</option>
+                <option value="bolosTortas">BOLOS E TORTAS DOCES</option>
                 <option value="carnes">CARNES</option>
                 <option value="aves">AVES</option>
-                <option value="peixesFrutos"> PEIXES E FRUTOS DO MAR</option>
+                <option value="peixesFrutos">PEIXES E FRUTOS DO MAR</option>
                 <option value="saladasMolhos">SALADAS, MOLHOS E ACOMPANHAMENTOS</option>
                 <option value="sopas">SOPAS</option>
                 <option value="massas">MASSAS</option>
                 <option value="bebidas">BEBIDAS</option>
-                <option value="doces"> DOCES E SOBREMESAS</option>
+                <option value="doces">DOCES E SOBREMESAS</option>
                 <option value="lanches">LANCHES</option>
                 <option value="pratoUnico">PRATO ÚNICO</option>
                 <option value="light">LIGHT</option>
