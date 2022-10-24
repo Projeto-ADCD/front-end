@@ -52,7 +52,7 @@ export default function Categoria() {
 
     function geraCategoria(tipoOrden) {
         let link = location.pathname + location.search
-        let regex = /&tag=\S{3,33}/
+        let regex = /&tag=\S{3,50}/
         link = link.replace(regex, "")
         link = link + `&tag=${tipoOrden}`
         window.location.href = link;

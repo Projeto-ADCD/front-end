@@ -32,7 +32,7 @@ export const adcd = {
     const urlCategoria =  tag !== "" ?
     urlChamado + `&tag=${tag}` : urlChamado
 
-    console.log(urlChamado)
+    console.log(urlCategoria)
     let resposta = await APIadcd.get(urlCategoria);
 
     resposta.data = resposta.data.map((recipe) => {
@@ -52,20 +52,21 @@ export const receita_id = {
 
 export const receitas = {
   async retornaTodasReceitas(page, paramOrdem, ascending, tag) {
-    console.log(tag)
     let urlChamado = "/receitas?page=" + page
-    if (paramOrdem === "") {
-      if (tag !== "") {
+    if (paramOrdem === "tempo"){
+      urlChamado = `/sort/tempo?ascending=${ascending}&page=${page}`
+      if(tag !== ""){
         urlChamado += `&tag=${tag}`
       }
-    } else {
-      if (paramOrdem === "tempo") {
-        urlChamado = `/sort/tempo?ascending=${ascending}&page=${page}`
-      } else if (paramOrdem === "porcao") {
-        urlChamado = `/sort/porcao?ascending=${ascending}&page=${page}`
+    }else if (paramOrdem === "porcao"){
+      urlChamado = `/sort/porcao?ascending=${ascending}&page=${page}`
+      if(tag !== ""){
+        urlChamado += `&tag=${tag}`
       }
     }
-
+    if(paramOrdem === "" && tag !== ""){
+      urlChamado += `&tag=${tag}`
+    }
 
     console.log(urlChamado)
     const resposta = await APIadcd.get(urlChamado);
@@ -85,7 +86,7 @@ export const receitaNome = {
 
     const urlCategoria = tag !== "" ?
     urlChamado + `&tag=${tag}` : urlChamado
-    console.log(urlChamado)
+    console.log(urlCategoria)
     const resposta = await APIadcd.get(urlCategoria);
 
     resposta.data = resposta.data.map((recipe) => {
